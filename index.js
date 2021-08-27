@@ -19,6 +19,7 @@ app.use("/", express.static(uploads));
 //#region - Routes
 const userRoute = require("./routes/userRoute");
 const fileUploadRoutes = require("./routes/fileUploadRoute");
+const postRoute = require("./routes/postRoutes");
 //#endregion - Routes
 
 app.get("/", (req, res) => {
@@ -27,6 +28,7 @@ app.get("/", (req, res) => {
 
 app.use("/users", userRoute);
 app.use("/file", fileUploadRoutes);
+app.use("/post", postRoute);
 
 app.listen(PORT, () => {
   console.log(`server listening on http://127.0.0.1:${PORT}/`);
