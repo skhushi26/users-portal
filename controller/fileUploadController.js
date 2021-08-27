@@ -31,7 +31,7 @@ exports.postUploadFile = async (req, res, next) => {
         return res.status(500).send(err);
       } else {
         res.send(
-          response(null, uploadPath, "Image uploaded successfully", 200)
+          response(null, uploadPath, "Image/video uploaded successfully", 200)
         );
       }
     });
